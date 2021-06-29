@@ -24,7 +24,7 @@ public class UserController {
         userEntity.setPassword(user.getPassword());
        // userEntity.setUuid(String.valueOf(Math.random()));
        UserEntity persistedEntiy= repo.saveAndFlush(userEntity);
-      // user.setUuid(String.valueOf(persistedEntiy.getUuid()));
+      // user.setUuid(String.valueOf(persistedEntiy.getUuid())) ;
         return new ResponseEntity<Object>(persistedEntiy, HttpStatus.OK);
     }
 
